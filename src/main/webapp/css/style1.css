@@ -1,0 +1,116 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.logo{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+.logo img{
+    font-size: 20px;
+}
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 25px;
+    font-family: 'Poppins',sans-serif;
+}
+.navbar .search{
+    font-size: 23px;
+    color: rgb(131, 127, 127);
+}
+ul{
+    list-style: none;
+
+}
+ul >li{
+    display: inline-block;
+    position: relative;
+    padding: 0 15px;
+    letter-spacing: 2px;
+}
+ul li a{
+    display: block;
+    padding: 0 10px;
+    text-decoration: none;
+    font-size: 17px;
+    text-align: center;
+    color: black;
+}
+ul li ul.dropdown li{
+    display: block;
+    background-color: rgb(201, 174, 228);
+}
+ul li ul.dropdown{
+    display: none;
+    width: 100%;
+    position: absolute;
+    z-index: 999;
+
+}
+ul li:hover ul.dropdown{
+    display: block;
+}
+
+.navbar .profile .fa{
+    padding: 0 20px 0 0;
+    color: rgb(139, 134, 134);
+    font-size: 23px;
+}
+
+
+
+        /*registration page*/
+        
+
+.form{
+    background-color: #fff;
+    width: 40%;
+
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.formheader{
+    display: flex;
+    justify-content: center;
+    padding-top: 87px;
+}
+.fromheader a .img{
+    width: auto;
+    height: 80px;
+}
+.formbody{
+    margin: 0 20px;
+    font-family: 'Poppins',sans-serif;
+
+}
+#submit{
+    width: 100%;
+    margin: 25px 0;
+}
+.changefont{
+    font-size: 15px;
+}
+
+
+
+                /*Admin page*/
+
+#adminheader .adminnav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+
+
+

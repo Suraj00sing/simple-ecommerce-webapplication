@@ -1,0 +1,15 @@
+com\ecom\shop\servlets\EditUserServlet.class
+com\ecom\shop\entities\Product.class
+com\ecom\shop\servlets\AddCategoryServlet.class
+com\ecom\shop\helper\Fileupload.class
+com\ecom\shop\servlets\Login.class
+com\ecom\shop\servlets\updateUserServlet.class
+com\ecom\shop\servlets\AddProductServlet.class
+com\ecom\shop\entities\User.class
+com\ecom\shop\dao\Userdao.class
+com\ecom\shop\resources\JakartaEE8Resource.class
+com\ecom\shop\servlets\DeleteCategoryServlet.class
+com\ecom\shop\servlets\Register.class
+com\ecom\shop\helper\FactoryProvider.class
+com\ecom\shop\entities\Category.class
+com\ecom\shop\servlets\DeleteUserServlet.class
