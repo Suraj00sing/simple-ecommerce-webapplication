@@ -52,8 +52,24 @@
 
         .card-body {
             padding: 10px;
-            height:150px;
+            height:180px;
             font-family: 'Poppins',sans-serif;
+        }
+        
+        .card-body .icons{
+            display: flex;
+            justify-content: end;
+            
+        }
+        .icons .fa-pencil-square-o{
+            margin: 0px 8px;
+            color: blue;
+            font-size: 23px;
+        }
+        .icons .fa-remove{
+            margin: 0px 8px;
+            color: red;
+            font-size: 23px;
         }
         
         .modal-content .modal-body{
@@ -67,6 +83,15 @@
         .btn-primary {
             background-color: #007bff; /* Customize the primary button color */
             border-color: #007bff;
+        }
+        
+        .price{
+            display: flex;
+            margin-top: 5px;
+        }
+        
+        .rupee{
+            font-size: 20px;
         }
        
         </style>
@@ -159,8 +184,15 @@
                             <img class="card-img-top" src="images/product/<%= p.getpPhoto()%>" alt="Card image cap">                                  
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">Bombay Shaving Company Power Play Trimmer For Men </h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <h5 class="card-title"><%= p.getpName() %></h5>
+                            <p class="card-text"><%= p.getpDesc() %></p>
+                            <div class="price">
+                                 <span class="rupee">&#8377;</span><h5><%= p.getpPrice() %></h5>
+                            </div>
+                           <div class="icons">
+                               <a id= "editicon" href="EditProductServlet?id=<%= p.getpId() %>" ><span class="fa fa-pencil-square-o"></span></a>
+                               <a id= "deleteicon" href="DeleteProductServlet?id=<%= p.getpId() %>" ><span class="fa fa-remove"></span></a>
+                           </div>
                         </div>
                     </div>
                     

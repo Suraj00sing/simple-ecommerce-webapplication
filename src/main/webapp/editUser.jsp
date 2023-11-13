@@ -86,6 +86,7 @@
                 <tr class="tr">
                     <th scope="row">Change Phone no. :</th>
                     <td><input name="newPhone" type="text" value="<%= u.getUserPhone() %>" ></td>
+                <a href="../java/com/ecom/shop/servlets/updateUserServlet.java"></a>
 
                 </tr>
                 

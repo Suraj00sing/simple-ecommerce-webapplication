@@ -1,5 +1,9 @@
 
 
+<%@page import="com.ecom.shop.helper.FactoryProvider"%>
+<%@page import="com.ecom.shop.dao.Userdao"%>
+<%@page import="java.util.List"%>
+<%@page import="com.ecom.shop.entities.Product"%>
 <%@page import="com.ecom.shop.entities.User"%>
 <%@include file="nav_css_js.jsp" %>
 
@@ -139,5 +143,35 @@ User u = (User) session.getAttribute("currentuser");
     </header>
         
         <div class="heading">All Categories</div>
+        
+       <div class="container card-container">
+        <!--1 card-->
+            
+            <%
+                Userdao dao= new Userdao(FactoryProvider.getFactory());
+                List<Product> product= dao.getAllProduct();
+               
+            %>
+            <div class="row">
+                <%      
+                           for (Product p : product) {
+                    %>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-img-container">
+                            <img class="card-img-top" src="images/product/<%= p.getpPhoto()%>" alt="Card image cap">                                  
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Bombay Shaving Company Power Play Trimmer For Men </h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                    
+                </div>
+                <%
+                        }
+                    %>
+            </div>  
+    </div>
     </body>
 </html>

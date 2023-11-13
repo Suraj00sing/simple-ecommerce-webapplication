@@ -145,6 +145,16 @@ public class Userdao {
         return success;
     }
     
+    public Product getProductById(int pid){
+         Product product = null;
+        try (Session session = factory.openSession()) {
+            product = session.get(Product.class, pid);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return product;
+    }
+    
     public boolean deleteCategory(int catId){
         boolean b= false;
         Transaction tx= null;
@@ -191,6 +201,42 @@ public class Userdao {
             List<Product> product= query.list();
             return product;
         }
+    }
+    
+    public boolean updateProduct(Product product) {
+        boolean b= false;
+        Transaction tx = null;
+        try (Session session = factory.openSession()) {
+            tx = session.beginTransaction();
+            session.update(product); // Update the user entity
+            tx.commit();
+            b=true;
+        } catch (Exception e) {
+            if (tx != null) {
+                tx.rollback(); // Rollback the transaction in case of an error
+            }
+            e.printStackTrace();
+        }
+        return b;
+    }
+    
+     public boolean deleteProduct(int pId){
+        boolean b= false;
+        Transaction tx= null;
+       try (Session session = factory.openSession()) {
+            tx = session.beginTransaction();
+            Product product = session.get(Product.class, pId);
+            session.delete(product); //deleting the user
+            tx.commit();
+            b=true;
+        } catch (Exception e) {
+            if (tx != null) {
+                tx.rollback(); // Rollback the transaction in case of an error
+            }
+            e.printStackTrace();
+        }
+        
+        return b;
     }
     
 }

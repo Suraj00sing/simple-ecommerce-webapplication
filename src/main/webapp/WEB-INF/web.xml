@@ -32,6 +32,18 @@
         <servlet-name>AddProductServlet</servlet-name>
         <servlet-class>com.ecom.shop.servlets.AddProductServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>DeleteProductServlet</servlet-name>
+        <servlet-class>com.ecom.shop.servlets.DeleteProductServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>EditProductServlet</servlet-name>
+        <servlet-class>com.ecom.shop.servlets.EditProductServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>updateProductServlet</servlet-name>
+        <servlet-class>com.ecom.shop.servlets.updateProductServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Register</servlet-name>
         <url-pattern>/Register</url-pattern>
@@ -63,6 +75,18 @@
     <servlet-mapping>
         <servlet-name>AddProductServlet</servlet-name>
         <url-pattern>/AddProductServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeleteProductServlet</servlet-name>
+        <url-pattern>/DeleteProductServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EditProductServlet</servlet-name>
+        <url-pattern>/EditProductServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>updateProductServlet</servlet-name>
+        <url-pattern>/updateProductServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
